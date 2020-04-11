@@ -6,6 +6,8 @@ const cors = require('cors')
 app.use(cors())
 app.use(express.json())
 app.use(morgan('tiny'))
+app.use(express.static('build'))
+
 
 morgan.token('postData', (req, res) => {
     console.log(req)
