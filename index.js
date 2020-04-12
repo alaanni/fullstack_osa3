@@ -74,10 +74,6 @@ app.delete('/api/persons/:id', (req, res) => {
   app.post('/api/persons', (req, res) => {
     console.log(req.headers)
     const body = req.body
-
-    const findPerson = (name) => () => {
-        persons.find(person => person.name === name)
-    }
  
     const person = {
       name: body.name,
